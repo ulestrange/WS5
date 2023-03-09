@@ -31,9 +31,16 @@ namespace Part2_Q3
             }
         }
 
-        static int getSumOfNumbersFromString(string s1)
+
+        /// <summary>
+        /// This accepts a string of integers separated by commas
+        /// </summary>
+        /// <param name="csvString"></param>
+        /// <returns>The sum of the integers in the CSV string</returns>
+        /// <exception cref="ArgumentException" >t</exception>
+        static int getSumOfNumbersFromString(string csvString)
         {
-            string[] digits = s1.Split(',');
+            string[] digits = csvString.Split(',');
 
             int number;
             int answer = 0;
