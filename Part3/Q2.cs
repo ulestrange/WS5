@@ -15,7 +15,7 @@
 
             try
             {
-                double answer = averageTestScore(t1);
+                double answer = AverageTestScore(t1);
                 Console.WriteLine($"answer is {answer}");
             }
             catch (Exception ex)
@@ -24,7 +24,7 @@
             }
             try
             {
-                double answer = averageTestScore(t2);
+                double answer = AverageTestScore(t2);
                 Console.WriteLine($"answer is {answer}");
             }
             catch (Exception ex)
@@ -33,7 +33,7 @@
             }
             try
             {
-                double answer = averageTestScore(t3);
+                double answer = AverageTestScore(t3);
                 Console.WriteLine($"answer is {answer}");
             }
             catch (Exception ex)
@@ -42,7 +42,7 @@
             }
             try
             {
-                double answer = averageTestScore(t4);
+                double answer = AverageTestScore(t4);
                 Console.WriteLine($"answer is {answer}");
             }
             catch (Exception ex)
@@ -51,7 +51,7 @@
             }
             try
             {
-                double answer = averageTestScore(t5);
+                double answer = AverageTestScore(t5);
                 Console.WriteLine($"answer is {answer}");
             }
             catch (Exception ex)
@@ -74,7 +74,7 @@
             {
                 try
                 {
-                    double answer = averageTestScore(anArray);
+                    double answer = AverageTestScore(anArray);
                     Console.WriteLine($"answer is {answer}");
                 }
                 catch (ArithmeticException ex)
@@ -93,19 +93,18 @@
 
         }
 
-            /// <summary>
-            /// Takes an array of integers between 0-100
-            /// must have 10 integers
-            /// </summary>
-            /// <param name="scores"></param>
-            /// <returns></returns>
-            /// <exception cref="ArithmeticException"></exception>
-            /// <exception cref="ArgumentException" ></exception>
-
-            static double averageTestScore(int[] scores)
+        /// <summary>
+        /// Takes an array of integers between 0-100
+        /// must have 10 integers
+        /// </summary>
+        /// <param name="scores"></param>
+        /// <returns>the average of the integers</returns>
+        /// <exception cref="ArithmeticException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        static  double AverageTestScore(int[] scores)
         {
             double total = 0; // double is a total so the average will work
-           
+
 
             if (scores.Length == 0)
             {
@@ -119,7 +118,7 @@
                     if (scores[i] < 0 || scores[i] > 100)
                     {
                         throw new ArgumentException($"Test score {i + 1} is {scores[i]} which is out of range");
-                       
+
                     }
                     total += scores[i];
                 }
@@ -128,9 +127,9 @@
                 return total / scores.Length;
             }
 
-            
+
         }
-      
+
 
     }
 }
